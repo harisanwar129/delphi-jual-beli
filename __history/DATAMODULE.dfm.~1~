@@ -1,0 +1,51 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 446
+  Width = 751
+  object ADODB_JUAL_BELI_BARANG: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;Data Source=DB_JU' +
+      'AL_BELI_BARANG;Initial Catalog=jual_beli_barang'
+    LoginPrompt = False
+    Left = 360
+    Top = 8
+  end
+  object ADOBARANG: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tbarang'
+    Left = 48
+    Top = 72
+    object ADOBARANGKODE_BARANG: TStringField
+      FieldName = 'KODE_BARANG'
+      Size = 15
+    end
+    object ADOBARANGNAMA_BARANG: TStringField
+      FieldName = 'NAMA_BARANG'
+      Size = 15
+    end
+    object ADOBARANGSTOCK: TIntegerField
+      FieldName = 'STOCK'
+    end
+  end
+  object DSBARANG: TDataSource
+    DataSet = ADOBARANG
+    Left = 120
+    Top = 72
+  end
+  object ADOKONSUMEN: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tkonsumen'
+    Left = 40
+    Top = 152
+  end
+  object DSKONSUMEN: TDataSource
+    DataSet = ADOKONSUMEN
+    Left = 112
+    Top = 152
+  end
+end

@@ -1,0 +1,87 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 446
+  Width = 751
+  object ADODB_JUAL_BELI_BARANG: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;Data Source=DB_JU' +
+      'AL_BELI_BARANG;Initial Catalog=jual_beli_barang'
+    LoginPrompt = False
+    Left = 360
+    Top = 8
+  end
+  object ADOBARANG: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tbarang'
+    Left = 48
+    Top = 72
+    object ADOBARANGKODE_BARANG: TStringField
+      FieldName = 'KODE_BARANG'
+      Size = 15
+    end
+    object ADOBARANGNAMA_BARANG: TStringField
+      FieldName = 'NAMA_BARANG'
+      Size = 15
+    end
+    object ADOBARANGSTOCK: TIntegerField
+      FieldName = 'STOCK'
+    end
+  end
+  object DSBARANG: TDataSource
+    DataSet = ADOBARANG
+    Left = 120
+    Top = 72
+  end
+  object ADOKONSUMEN: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tkonsumen'
+    Left = 40
+    Top = 152
+    object ADOKONSUMENKODE_KONSUMEN: TStringField
+      FieldName = 'KODE_KONSUMEN'
+      Size = 15
+    end
+    object ADOKONSUMENNAMA_KONSUMEN: TStringField
+      FieldName = 'NAMA_KONSUMEN'
+      Size = 15
+    end
+    object ADOKONSUMENALAMAT: TStringField
+      FieldName = 'ALAMAT'
+    end
+  end
+  object DSKONSUMEN: TDataSource
+    DataSet = ADOKONSUMEN
+    Left = 112
+    Top = 152
+  end
+  object ADOSUPPLIER: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tsupplier'
+    Left = 40
+    Top = 256
+    object ADOSUPPLIERKODE_SUPPLIER: TStringField
+      FieldName = 'KODE_SUPPLIER'
+      Size = 15
+    end
+    object ADOSUPPLIERNAMA_SUPPLIER: TStringField
+      FieldName = 'NAMA_SUPPLIER'
+      Size = 15
+    end
+    object ADOSUPPLIERTELP: TStringField
+      FieldName = 'TELP'
+      Size = 15
+    end
+  end
+  object DSSUPPLIER: TDataSource
+    DataSet = ADOSUPPLIER
+    Left = 112
+    Top = 256
+  end
+end

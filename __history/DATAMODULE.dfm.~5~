@@ -1,0 +1,228 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 446
+  Width = 751
+  object ADODB_JUAL_BELI_BARANG: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;Data Source=DB_JU' +
+      'AL_BELI_BARANG;Initial Catalog=jual_beli_barang'
+    LoginPrompt = False
+    Left = 360
+    Top = 8
+  end
+  object ADOBARANG: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tbarang'
+    Left = 48
+    Top = 72
+    object ADOBARANGKODE_BARANG: TStringField
+      FieldName = 'KODE_BARANG'
+      Size = 15
+    end
+    object ADOBARANGNAMA_BARANG: TStringField
+      FieldName = 'NAMA_BARANG'
+      Size = 15
+    end
+    object ADOBARANGSTOCK: TIntegerField
+      FieldName = 'STOCK'
+    end
+  end
+  object DSBARANG: TDataSource
+    DataSet = ADOBARANG
+    Left = 120
+    Top = 72
+  end
+  object ADOKONSUMEN: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tkonsumen'
+    Left = 40
+    Top = 152
+    object ADOKONSUMENKODE_KONSUMEN: TStringField
+      FieldName = 'KODE_KONSUMEN'
+      Size = 15
+    end
+    object ADOKONSUMENNAMA_KONSUMEN: TStringField
+      FieldName = 'NAMA_KONSUMEN'
+      Size = 15
+    end
+    object ADOKONSUMENALAMAT: TStringField
+      FieldName = 'ALAMAT'
+    end
+  end
+  object DSKONSUMEN: TDataSource
+    DataSet = ADOKONSUMEN
+    Left = 112
+    Top = 152
+  end
+  object ADOSUPPLIER: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tsupplier'
+    Left = 40
+    Top = 256
+    object ADOSUPPLIERKODE_SUPPLIER: TStringField
+      FieldName = 'KODE_SUPPLIER'
+      Size = 15
+    end
+    object ADOSUPPLIERNAMA_SUPPLIER: TStringField
+      FieldName = 'NAMA_SUPPLIER'
+      Size = 15
+    end
+    object ADOSUPPLIERTELP: TStringField
+      FieldName = 'TELP'
+      Size = 15
+    end
+  end
+  object DSSUPPLIER: TDataSource
+    DataSet = ADOSUPPLIER
+    Left = 112
+    Top = 256
+  end
+  object ADOBELI: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tbeli'
+    Left = 248
+    Top = 72
+    object ADOBELINOTA_BELI: TStringField
+      FieldName = 'NOTA_BELI'
+      Size = 15
+    end
+    object ADOBELITANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object ADOBELIKODE_SUPPLIER: TStringField
+      FieldName = 'KODE_SUPPLIER'
+      Size = 15
+    end
+    object ADOBELIKODE_BARANG: TStringField
+      FieldName = 'KODE_BARANG'
+      Size = 15
+    end
+    object ADOBELIJUMLAH: TFMTBCDField
+      FieldName = 'JUMLAH'
+      Precision = 64
+      Size = 0
+    end
+    object ADOBELIHARGA_BELI: TFMTBCDField
+      FieldName = 'HARGA_BELI'
+      Precision = 64
+      Size = 0
+    end
+    object ADOBELITOTAL_HARGA: TFMTBCDField
+      FieldName = 'TOTAL_HARGA'
+      Precision = 64
+      Size = 0
+    end
+    object ADOBELINAMA_SUPPLIER: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NAMA_SUPPLIER'
+      LookupDataSet = ADOSUPPLIER
+      LookupKeyFields = 'KODE_SUPPLIER'
+      LookupResultField = 'NAMA_SUPPLIER'
+      KeyFields = 'KODE_SUPPLIER'
+      Size = 15
+      Lookup = True
+    end
+    object ADOBELINAMA_BARANG: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NAMA_BARANG'
+      LookupDataSet = ADOBARANG
+      LookupKeyFields = 'KODE_BARANG'
+      LookupResultField = 'NAMA_BARANG'
+      KeyFields = 'KODE_BARANG'
+      Size = 15
+      Lookup = True
+    end
+  end
+  object DSBELI: TDataSource
+    DataSet = ADOBELI
+    Left = 312
+    Top = 64
+  end
+  object ADOMASTERJUAL: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tmasterjual'
+    Left = 248
+    Top = 160
+    object ADOMASTERJUALNOTA_JUAL: TStringField
+      FieldName = 'NOTA_JUAL'
+      Size = 15
+    end
+    object ADOMASTERJUALTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
+    end
+    object ADOMASTERJUALKODE_KONSUMEN: TStringField
+      FieldName = 'KODE_KONSUMEN'
+      Size = 15
+    end
+    object ADOMASTERJUALNAMA_KONSUMEN: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NAMA_KONSUMEN'
+      LookupDataSet = ADOKONSUMEN
+      LookupKeyFields = 'KODE_KONSUMEN'
+      LookupResultField = 'NAMA_KONSUMEN'
+      KeyFields = 'KODE_KONSUMEN'
+      Size = 15
+      Lookup = True
+    end
+  end
+  object DSMASTERJUAL: TDataSource
+    DataSet = ADOMASTERJUAL
+    Left = 312
+    Top = 160
+  end
+  object ADODETAILJUAL: TADOTable
+    Active = True
+    Connection = ADODB_JUAL_BELI_BARANG
+    CursorType = ctStatic
+    TableName = 'tdetiljual'
+    Left = 240
+    Top = 248
+    object ADODETAILJUALNOTA_JUAL: TStringField
+      FieldName = 'NOTA_JUAL'
+      Size = 15
+    end
+    object ADODETAILJUALKODE_BARANG: TStringField
+      FieldName = 'KODE_BARANG'
+      Size = 15
+    end
+    object ADODETAILJUALJUMLAH: TIntegerField
+      FieldName = 'JUMLAH'
+    end
+    object ADODETAILJUALHARGA_JUAL: TFMTBCDField
+      FieldName = 'HARGA_JUAL'
+      Precision = 64
+      Size = 0
+    end
+    object ADODETAILJUALTOTAL_HARGAA: TFMTBCDField
+      FieldName = 'TOTAL_HARGAA'
+      Precision = 64
+      Size = 0
+    end
+    object ADODETAILJUALNAMA_BARANG: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NAMA_BARANG'
+      LookupDataSet = ADOBARANG
+      LookupKeyFields = 'KODE_BARANG'
+      LookupResultField = 'NAMA_BARANG'
+      KeyFields = 'KODE_BARANG'
+      Size = 15
+      Lookup = True
+    end
+  end
+  object DSDETAILJUAL: TDataSource
+    DataSet = ADODETAILJUAL
+    Left = 312
+    Top = 248
+  end
+end

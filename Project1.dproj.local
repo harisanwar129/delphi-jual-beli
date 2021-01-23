@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/11/10 13:33:35.000.557,=C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/10 13:40:29.000.750,=C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/11/10 13:41:01.000.272,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\haris\Documents\Embarcadero\Studio\Projects\DATAMODULE.dfm</Transaction>
+    <Transaction>2020/11/10 13:41:01.000.272,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\haris\Documents\Embarcadero\Studio\Projects\DATAMODULE.pas</Transaction>
+    <Transaction>2020/11/10 13:41:51.000.676,=C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/11/10 14:42:56.000.098,=C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2020/11/10 14:49:56.000.450,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit2.pas=D:\kuliah\delphi\JUALBELI\Unit2.pas</Transaction>
+    <Transaction>2020/11/10 14:49:56.000.450,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit2.dfm=D:\kuliah\delphi\JUALBELI\Unit2.dfm</Transaction>
+    <Transaction>2020/11/10 14:49:59.000.685,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\kuliah\delphi\JUALBELI\Unit1.dfm</Transaction>
+    <Transaction>2020/11/10 14:49:59.000.684,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\kuliah\delphi\JUALBELI\Unit1.pas</Transaction>
+    <Transaction>2020/11/10 14:50:02.000.908,C:\Users\haris\Documents\Embarcadero\Studio\Projects\DATAMODULE.pas=D:\kuliah\delphi\JUALBELI\DATAMODULE.pas</Transaction>
+    <Transaction>2020/11/10 14:50:02.000.908,C:\Users\haris\Documents\Embarcadero\Studio\Projects\DATAMODULE.dfm=D:\kuliah\delphi\JUALBELI\DATAMODULE.dfm</Transaction>
+    <Transaction>2020/11/10 14:50:05.000.501,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit3.pas=D:\kuliah\delphi\JUALBELI\Unit3.pas</Transaction>
+    <Transaction>2020/11/10 14:50:05.000.501,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Unit3.dfm=D:\kuliah\delphi\JUALBELI\Unit3.dfm</Transaction>
+    <Transaction>2020/11/10 14:50:08.000.201,C:\Users\haris\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\kuliah\delphi\JUALBELI\Project1.dproj</Transaction>
+    <Transaction>2020/11/10 15:54:06.000.557,=D:\kuliah\delphi\JUALBELI\Unit4.pas</Transaction>
+    <Transaction>2020/11/10 20:31:01.000.462,=D:\kuliah\delphi\JUALBELI\Unit5.pas</Transaction>
+    <Transaction>2020/11/24 13:28:02.000.712,=D:\kuliah\delphi\JUALBELI\Unit6.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,69 @@
+unit DATAMODULE;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
+
+type
+  TDataModule2 = class(TDataModule)
+    ADODB_JUAL_BELI_BARANG: TADOConnection;
+    ADOBARANG: TADOTable;
+    DSBARANG: TDataSource;
+    ADOBARANGKODE_BARANG: TStringField;
+    ADOBARANGNAMA_BARANG: TStringField;
+    ADOBARANGSTOCK: TIntegerField;
+    ADOKONSUMEN: TADOTable;
+    DSKONSUMEN: TDataSource;
+    ADOKONSUMENKODE_KONSUMEN: TStringField;
+    ADOKONSUMENNAMA_KONSUMEN: TStringField;
+    ADOKONSUMENALAMAT: TStringField;
+    ADOSUPPLIER: TADOTable;
+    DSSUPPLIER: TDataSource;
+    ADOSUPPLIERKODE_SUPPLIER: TStringField;
+    ADOSUPPLIERNAMA_SUPPLIER: TStringField;
+    ADOSUPPLIERTELP: TStringField;
+    ADOBELI: TADOTable;
+    DSBELI: TDataSource;
+    ADOBELINOTA_BELI: TStringField;
+    ADOBELITANGGAL: TDateTimeField;
+    ADOBELIKODE_SUPPLIER: TStringField;
+    ADOBELIKODE_BARANG: TStringField;
+    ADOBELIJUMLAH: TFMTBCDField;
+    ADOBELIHARGA_BELI: TFMTBCDField;
+    ADOBELITOTAL_HARGA: TFMTBCDField;
+    ADOBELINAMA_SUPPLIER: TStringField;
+    ADOBELINAMA_BARANG: TStringField;
+    ADOMASTERJUAL: TADOTable;
+    DSMASTERJUAL: TDataSource;
+    ADODETAILJUAL: TADOTable;
+    DSDETAILJUAL: TDataSource;
+    ADOMASTERJUALNOTA_JUAL: TStringField;
+    ADOMASTERJUALTANGGAL: TDateTimeField;
+    ADOMASTERJUALKODE_KONSUMEN: TStringField;
+    ADODETAILJUALNOTA_JUAL: TStringField;
+    ADODETAILJUALKODE_BARANG: TStringField;
+    ADODETAILJUALJUMLAH: TIntegerField;
+    ADODETAILJUALHARGA_JUAL: TFMTBCDField;
+    ADODETAILJUALTOTAL_HARGAA: TFMTBCDField;
+    ADOMASTERJUALNAMA_KONSUMEN: TStringField;
+    ADODETAILJUALNAMA_BARANG: TStringField;
+    ADOQuery1: TADOQuery;
+    DSQUERY: TDataSource;
+    ADOQuery1TOTAL_BELANJA: TFMTBCDField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule2: TDataModule2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,214 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 500
+  ClientWidth = 792
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 344
+    Top = 24
+    Width = 130
+    Height = 24
+    Caption = 'DATA BARANG'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 176
+    Top = 120
+    Width = 113
+    Height = 19
+    Caption = 'KODE_BARANG'
+    FocusControl = DBEdit1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 176
+    Top = 160
+    Width = 117
+    Height = 19
+    Caption = 'NAMA_BARANG'
+    FocusControl = DBEdit2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 176
+    Top = 200
+    Width = 50
+    Height = 19
+    Caption = 'STOCK'
+    FocusControl = DBEdit3
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 304
+    Top = 117
+    Width = 199
+    Height = 27
+    DataField = 'KODE_BARANG'
+    DataSource = DataModule2.DSBARANG
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 304
+    Top = 157
+    Width = 199
+    Height = 27
+    DataField = 'NAMA_BARANG'
+    DataSource = DataModule2.DSBARANG
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 304
+    Top = 197
+    Width = 134
+    Height = 27
+    DataField = 'STOCK'
+    DataSource = DataModule2.DSBARANG
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBGrid1: TDBGrid
+    Left = 71
+    Top = 328
+    Width = 474
+    Height = 120
+    DataSource = DataModule2.DSBARANG
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Button1: TButton
+    Left = 559
+    Top = 80
+    Width = 75
+    Height = 25
+    Caption = 'TAMBAH'
+    TabOrder = 4
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 560
+    Top = 136
+    Width = 75
+    Height = 25
+    Caption = 'SIMPAN'
+    TabOrder = 5
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 559
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'UBAH'
+    TabOrder = 6
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 688
+    Top = 80
+    Width = 75
+    Height = 25
+    Caption = 'HAPUS'
+    TabOrder = 7
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 688
+    Top = 136
+    Width = 75
+    Height = 25
+    Caption = 'BATAL'
+    TabOrder = 8
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 688
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'KELUAR'
+    TabOrder = 9
+    OnClick = Button6Click
+  end
+  object GroupBox1: TGroupBox
+    Left = 578
+    Top = 328
+    Width = 206
+    Height = 105
+    Caption = 'Masukan Kode Barang'
+    TabOrder = 10
+    object Edit1: TEdit
+      Left = 40
+      Top = 40
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object Button7: TButton
+      Left = 64
+      Top = 77
+      Width = 75
+      Height = 25
+      Caption = 'Cari'
+      TabOrder = 1
+      OnClick = Button7Click
+    end
+  end
+end

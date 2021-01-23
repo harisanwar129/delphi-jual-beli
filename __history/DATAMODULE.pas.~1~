@@ -1,0 +1,33 @@
+unit DATAMODULE;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
+
+type
+  TDataModule2 = class(TDataModule)
+    ADODB_JUAL_BELI_BARANG: TADOConnection;
+    ADOBARANG: TADOTable;
+    DSBARANG: TDataSource;
+    ADOBARANGKODE_BARANG: TStringField;
+    ADOBARANGNAMA_BARANG: TStringField;
+    ADOBARANGSTOCK: TIntegerField;
+    ADOKONSUMEN: TADOTable;
+    DSKONSUMEN: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule2: TDataModule2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.
